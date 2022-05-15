@@ -1,9 +1,13 @@
 // Вопрос 1
+const formREF = document.querySelector("#my-form");
 const labelPolitik = document.querySelector("[data-cofid]");
 
-labelPolitik.addEventListener("click", function(e){
-   e.currentTarget.classList.toggle("active");
-   console.log("клик");
+formREF.addEventListener("click", function(e){
+   if(e.target.classList.contains("form-label") || e.target.closest(".form-label")){
+      e.preventDefault();
+      e.currentTarget.classList.toggle("active");
+      console.log("клик");
+   }
 });
 
 // Вопрос 2
