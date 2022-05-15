@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .form-label {
+         padding-left: 30px;
+         position: relative;
+         display: flex;
+         cursor: pointer;
+         align-items: center;
+      }
+      .form-label input {
+         display: none;
+      }
+      .form-label p {
+         margin-top: 0px;
+         margin-bottom: 0px;
+         font-size: 16px;
+         line-height: 20px;
+      }
+      .form-label:before {
+         content:'';
+         display: block;
+         width: 20px;
+         height: 20px;
+         position: absolute;
+         top: 0px;
+         left: 0px;
+         border: 1px solid #222;
+         transition: 0.25s;
+      }
+      .form-label.active:before {
+         background: #222;
+      }
+      .form-label.active:after {
+         opacity: 1;
+      }
+      .form-label:after {
+         content:'';
+         display: block;
+         width: 9px;
+         height: 6px;
+         opacity: 0;
+         left: 6px;
+         top: 5px;
+         position: absolute;
+         z-index: 10;
+         transition: 0.25s;
+         transform: rotate(-45deg);
+         border-left: 1px solid #fff;
+         border-bottom: 1px solid #fff;
+      }
+      .tabs {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-top: 100px;
+      }
+      .tab {
+         margin-left: 10px;
+         margin-right: 10px;
+      }
+      .tab span {
+         display: flex;
+         width: 100px;
+         height: 50px;
+         justify-content: center;
+         align-items: center;
+         background: #222;
+         color: #fff;
+         cursor: pointer;
+         font-size: 14px;
+         text-align: center;
+      }
+   </style>
+</head>
+<body>
+   <!-- вопрос 1 -->
+   <form action="#">
+      <label class="form-label active" data-cofid>
+         <input type="checkbox">
+         <p>Политика конфиденциальности</p>
+      </label>
+   </form>
+
+   <!-- Вопрос 2 -->
+   <div class="tabs">
+      <div class="tab" data-tab>
+         <span>Название таба</span>
+      </div>
+      <div class="tab" data-tab>
+         <span>Название таба</span>
+      </div>
+      <div class="tab" data-tab>
+         <span>Название таба</span>
+      </div>
+      <div class="tab" data-tab>
+         <span>Название таба</span>
+      </div>
+      <div class="tab" data-tab>
+         <span>Название таба</span>
+      </div>
+      <div class="tab" data-tab>
+         <span>Название таба</span>
+      </div>
+   </div>
+   
+   <script src="./script.js"></script>
+</body>
+</html>
